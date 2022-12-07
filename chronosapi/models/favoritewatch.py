@@ -1,5 +1,6 @@
-class FavoriteWatch():
-    def __init__(self, id, watchId, customerId):
-        self.id = id
-        self.watchId = watchId
-        self.customerId = customerId
+from django.db import models
+
+
+class FavoriteWatch(models.Model):
+    watchId = models.ForeignKey("Watch", on_delete=models.CASCADE)
+    customerId = models.ForeignKey("Customer", on_delete=models.CASCADE)

@@ -1,5 +1,6 @@
-class WatchType():
-    def __init__(self, id, type, watchId):
-        self.id = id
-        self.type = type
-        self.watchId = watchId
+from django.db import models
+
+
+class WatchType(models.Model):
+    type = models.CharField(max_length=50)
+    watchId = models.ForeignKey("Watch", on_delete=models.CASCADE)
