@@ -1,7 +1,8 @@
-class Watch():
-    def __init__(self, id, name, style, price, customerId):
-        self.id = id
-        self.name = name
-        self.style = style
-        self.price = price
-        self.customerId = customerId
+from django.db import models
+
+
+class Watch(models.Model):
+    name = models.CharField(max_length=50)
+    style = models.CharField(max_length=50)
+    price = models.CharField(max_length=50)
+    customerId = models.ForeignKey("Customer", on_delete=models.CASCADE)
