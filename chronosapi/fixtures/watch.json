@@ -1,0 +1,32 @@
+[
+    {
+        "model": "chronosapi.watch",
+        "pk": 1,
+        "fields": {
+            "name": "Timex X Todd Snyder Mk1",
+            "style": "Men",
+            "price": 140,
+            "customer": 1
+        }
+    },
+    {
+        "model": "chronosapi.watch",
+        "pk": 2,
+        "fields": {
+            "name": "Tissot Seastar 1000",
+            "style": "Women",
+            "price": 540,
+            "customer": 2
+        }
+    },
+    {
+        "model": "chronosapi.watch",
+        "pk": 3,
+        "fields": {
+            "name": "Casio G-Shock DW6900",
+            "style": "Kids",
+            "price": 60,
+            "customer": 3
+        }
+    }
+]

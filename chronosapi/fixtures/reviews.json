@@ -1,0 +1,29 @@
+[
+    {
+        "model": "chronosapi.reviews",
+        "pk": 1,
+        "fields": {
+            "review": "I have had a watch for many years. I have a few models but I am currently in love with the Timex X Todd Snyder Mk1 model. I have used it for many years and it has performed perfectly. I have worn it on hikes, camping and even skiing and it hasn't skipped a beat. It has great water resistance and the battery life is perfect. I am very happy with this watch and just wanted to let you know that I am a fan of Timex.",
+            "customer": 1,
+            "watch": 1
+        }
+    },
+    {
+        "model": "chronosapi.reviews",
+        "pk": 2,
+        "fields": {
+            "review": "I have had a watch for many years. I have a few models but I am currently in love with the Timex X Todd Snyder Mk1 model. I have used it for many years and it has performed perfectly. I have worn it on hikes, camping and even skiing and it hasn't skipped a beat. It has great water resistance and the battery life is perfect. I am very happy with this watch and just wanted to let you know that I am a fan of Timex.",
+            "customer": 2,
+            "watch": 2
+        }
+    },
+    {
+        "model": "chronosapi.reviews",
+        "pk": 3,
+        "fields": {
+            "review": "I have had a watch for many years. I have a few models but I am currently in love with the Timex X Todd Snyder Mk1 model. I have used it for many years and it has performed perfectly. I have worn it on hikes, camping and even skiing and it hasn't skipped a beat. It has great water resistance and the battery life is perfect. I am very happy with this watch and just wanted to let you know that I am a fan of Timex.",
+            "customer": 3,
+            "watch": 3
+        }
+    }
+]

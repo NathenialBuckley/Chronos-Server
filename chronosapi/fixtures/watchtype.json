@@ -1,0 +1,26 @@
+[
+    {
+        "model": "chronosapi.watchtype",
+        "pk": 1,
+        "fields": {
+            "type": "Digital",
+            "watch": 1
+        }
+    },
+    {
+        "model": "chronosapi.watchtype",
+        "pk": 2,
+        "fields": {
+            "type": "Mechanical",
+            "watch": 2
+        }
+    },
+    {
+        "model": "chronosapi.watchtype",
+        "pk": 3,
+        "fields": {
+            "type": "Quartz",
+            "watch": 3
+        }
+    }
+]

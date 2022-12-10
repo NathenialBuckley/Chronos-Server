@@ -1,0 +1,26 @@
+[
+    {
+        "model": "chronosapi.favoritewatch",
+        "pk": 1,
+        "fields": {
+            "watch": 1,
+            "customer": 1
+        }
+    },
+    {
+        "model": "chronosapi.favoritewatch",
+        "pk": 2,
+        "fields": {
+            "watch": 2,
+            "customer": 2
+        }
+    },
+    {
+        "model": "chronosapi.favoritewatch",
+        "pk": 3,
+        "fields": {
+            "watch": 3,
+            "customer": 3
+        }
+    }
+]
