@@ -1,0 +1,47 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+            "last_login": null,
+            "username": "Carrie1945",
+            "first_name": "Carrie",
+            "last_name": "Belk",
+            "email": "me@me.com",
+            "is_staff": false,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$320000$6caQGznxTT5xOWckvjT6QO$YZTdqhVzw5XIXUcA2TrQsZuC4SJGBeFc2OYOIz6j8Lk=",
+            "last_login": null,
+            "username": "meg@ducharme.com",
+            "first_name": "Meg",
+            "last_name": "Ducharme",
+            "email": "meg@ducharme.com",
+            "is_staff": true,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$320000$NKseENHvY06F1AIu2RdtPX$mEuwkQRhvscNYW9ORA68BddrY96oVevnyLz6szhmrO4=",
+            "last_login": null,
+            "username": "jenna@solis.com",
+            "first_name": "Jenna",
+            "last_name": "Solis",
+            "email": "jenna@solis.com",
+            "is_staff": false,
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]

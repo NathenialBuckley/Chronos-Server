@@ -1,0 +1,38 @@
+[
+    {
+        "model": "chronosapi.customer",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "address": "41272 Talmadge Parkway",
+            "city": "Austin",
+            "state": "Texas",
+            "postalCode": "73301",
+            "phone": "9007936458"
+        }
+    },
+    {
+        "model": "chronosapi.customer",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "address": "32203 Paget Street",
+            "city": "Reno",
+            "state": "Nevada",
+            "postalCode": "89420",
+            "phone": "2097596088"
+        }
+    },
+    {
+        "model": "chronosapi.customer",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "address": "95 David Alley",
+            "city": "Anchorage",
+            "state": "Alaska",
+            "postalCode": "99513",
+            "phone": "3935026602"
+        }
+    }
+]
