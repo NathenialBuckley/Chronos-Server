@@ -8,6 +8,7 @@ from chronosapi.views import FavoriteWatchView
 from chronosapi.views import ReviewView
 from chronosapi.views import WatchTypeView
 from chronosapi.views import WatchView
+from chronosapi.views import SuggestionView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'customers', CustomerView, 'customer')
@@ -15,6 +16,7 @@ router.register(r'favoritewatches', FavoriteWatchView, 'favoritewatch')
 router.register(r'reviews', ReviewView, 'review')
 router.register(r'watchtypes', WatchTypeView, 'watchtype')
 router.register(r'watches', WatchView, 'watch')
+router.register(r'suggestions', SuggestionView, 'suggestion')
 
 urlpatterns = [
     path('register', register_user),

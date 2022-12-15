@@ -1,0 +1,32 @@
+[
+    {
+        "model": "chronosapi.suggestion",
+        "pk": 1,
+        "fields": {
+            "name": "Timex X Todd Snyder Mk2",
+            "watchtype": 1,
+            "price": 250,
+            "customer": 1
+        }
+    },
+    {
+        "model": "chronosapi.suggestion",
+        "pk": 2,
+        "fields": {
+            "name": "Tissot Seastar 2000",
+            "watchtype": 2,
+            "price": 957,
+            "customer": 2
+        }
+    },
+    {
+        "model": "chronosapi.suggestion",
+        "pk": 3,
+        "fields": {
+            "name": "Casio G-Shock DW6900 Mk2",
+            "watchtype": 3,
+            "price": 148,
+            "customer": 3
+        }
+    }
+]
