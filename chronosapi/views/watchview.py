@@ -43,4 +43,4 @@ class WatchView(ViewSet):
 class WatchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Watch
-        fields = ('id', 'name', 'style', 'price', 'customerId')
+        fields = ('id', 'name', 'price', 'customerId')

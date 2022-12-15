@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "name": "Timex X Todd Snyder Mk1",
-            "style": "Men",
+            "watchtype": 1,
             "price": 140,
             "customer": 1
         }
@@ -14,7 +14,7 @@
         "pk": 2,
         "fields": {
             "name": "Tissot Seastar 1000",
-            "style": "Women",
+            "watchtype": 2,
             "price": 540,
             "customer": 2
         }
@@ -24,7 +24,7 @@
         "pk": 3,
         "fields": {
             "name": "Casio G-Shock DW6900",
-            "style": "Kids",
+            "watchtype": 3,
             "price": 60,
             "customer": 3
         }
