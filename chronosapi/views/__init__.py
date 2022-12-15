@@ -4,3 +4,4 @@ from .reviewview import ReviewView
 from .watchview import WatchView
 from .favoritewatchview import FavoriteWatchView
 from .watchtypeview import WatchTypeView
+from .suggestionview import SuggestionView
