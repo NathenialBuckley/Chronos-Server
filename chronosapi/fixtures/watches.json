@@ -6,7 +6,8 @@
             "name": "Timex X Todd Snyder Mk1",
             "watchtype": 1,
             "price": 140,
-            "customer": 1
+            "customer": 1,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwfM341EHr4h5YQV_q5-3TQUNqj_RMnC8_Lg&usqp=CAU"
         }
     },
     {
@@ -16,7 +17,8 @@
             "name": "Tissot Seastar 1000",
             "watchtype": 2,
             "price": 540,
-            "customer": 2
+            "customer": 2,
+            "image": "https://www.brownjewelers.com/media/catalog/product/cache/4295d61f31fb9745f9f550fe99874a38/T/1/T120.407.11.041.00_1_1.webp"
         }
     },
     {
@@ -26,7 +28,8 @@
             "name": "Casio G-Shock DW6900",
             "watchtype": 3,
             "price": 60,
-            "customer": 3
+            "customer": 3,
+            "image": "https://pic.watchclicker.com/wp-content/uploads/2021/09/15100819/Casio-G-Shock-DW6900-6.jpg"
         }
     }
 ]
