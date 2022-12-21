@@ -2,7 +2,7 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from chronosapi.models import Watch
+from chronosapi.models import Watch, Customer, WatchType
 
 
 class WatchView(ViewSet):
@@ -13,16 +13,19 @@ class WatchView(ViewSet):
         serialized = WatchSerializer(watch, context={'request': request})
         return Response(serialized.data, status=status.HTTP_200_OK)
 
-    def list(self):
+    def list(self, request):
         watches = Watch.objects.all()
         serialized = WatchSerializer(watches, many=True)
         return Response(serialized.data, status=status.HTTP_200_OK)
 
     def create(self, request):
-        watch = Watch.objects.get(pk=request.data['watches'])
-
+        customer_id = Customer.objects.get(user=request.auth.user)
+        watch_type = WatchType.objects.get(pk=request.data["watchTypeId"])
         watch = Watch.objects.create(
-            label=request.data['label'],
+            name=request.data['name'],
+            watchtype=watch_type,
+            price=request.data['price'],
+            customer=customer_id,
         )
         serializer = WatchSerializer(watch)
         return Response(serializer.data)
@@ -43,4 +46,4 @@ class WatchView(ViewSet):
 class WatchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Watch
-        fields = ('id', 'name', 'price', 'customerId')
+        fields = ('id', 'name', 'watchtype', 'price', 'customer', 'image')

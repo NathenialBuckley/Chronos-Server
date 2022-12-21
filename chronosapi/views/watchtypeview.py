@@ -45,4 +45,4 @@ class WatchTypeView(ViewSet):
 class WatchTypeSeralizer(serializers.ModelSerializer):
     class Meta:
         model = WatchType
-        fields = ('id', 'type', 'watchId')
+        fields = ('id', 'type')
