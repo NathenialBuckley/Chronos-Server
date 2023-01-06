@@ -36,7 +36,7 @@ class WatchView(ViewSet):
 
         return Response(None, status=status.HTTP_205_RESET_CONTENT)
 
-    def destroy(self, request, pk):
+    def destroy(self, request, pk=None):
         watch = Watch.objects.get(pk=pk)
         watch.delete()
 

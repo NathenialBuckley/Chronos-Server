@@ -2,7 +2,7 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from chronosapi.models import FavoriteWatch
+from chronosapi.models import FavoriteWatch, Watch, Customer
 
 
 """Chronos API Cusotmer View"""
@@ -15,7 +15,7 @@ class FavoriteWatchView(ViewSet):
         serializer = FavoriteWatchSeralizer(fWatch)
         return Response(serializer.data)
 
-    def list(self):
+    def list(self, request):
         fwatch = FavoriteWatch.objects.all()
         seralized = FavoriteWatchSeralizer(fwatch, many=True)
         return Response(seralized.data, status=status.HTTP_200_OK)
@@ -42,7 +42,22 @@ class FavoriteWatchView(ViewSet):
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 
+class WatchSeralizer(serializers.ModelSerializer):
+    class Meta:
+        model = Watch
+        fields = ('id', 'name', 'image')
+
+
+class CustomerSeralizer(serializers.ModelSerializer):
+    class Meta:
+        model = Customer
+        fields = ('id',)
+
+
 class FavoriteWatchSeralizer(serializers.ModelSerializer):
+    watch = WatchSeralizer(many=False)
+    customer = CustomerSeralizer(many=False)
+
     class Meta:
         model = FavoriteWatch
-        fields = ('id', 'watchId', 'customerId')
+        fields = ('id', 'watch', 'customer')
