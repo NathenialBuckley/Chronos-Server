@@ -9,3 +9,4 @@ class Customer(models.Model):
     postalCode = models.IntegerField()
     phone = models.IntegerField()
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    image = models.CharField(max_length=300)
