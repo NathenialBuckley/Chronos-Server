@@ -3,6 +3,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from chronosapi.models import Watch, Customer, WatchType
+from django.contrib.auth.models import User
 
 
 class WatchView(ViewSet):
@@ -26,6 +27,7 @@ class WatchView(ViewSet):
             watchtype=watch_type,
             price=request.data['price'],
             customer=customer_id,
+            image=request.data['image']
         )
         serializer = WatchSerializer(watch)
         return Response(serializer.data)
@@ -43,7 +45,23 @@ class WatchView(ViewSet):
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 
+class UserSeralizer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id', 'username')
+
+
+class CustomerSeralizer(serializers.ModelSerializer):
+    user = UserSeralizer(many=False)
+
+    class Meta:
+        model = Customer
+        fields = ('id', 'user')
+
+
 class WatchSerializer(serializers.ModelSerializer):
+    customer = CustomerSeralizer(many=False)
+
     class Meta:
         model = Watch
         fields = ('id', 'name', 'watchtype', 'price', 'customer', 'image')

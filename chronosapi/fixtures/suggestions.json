@@ -6,7 +6,8 @@
             "name": "Timex X Todd Snyder Mk2",
             "watchtype": 1,
             "price": 250,
-            "customer": 1
+            "customer": 1,
+            "image": "https://cdn.pixabay.com/photo/2016/11/29/13/39/analog-watch-1869928_960_720.jpg"
         }
     },
     {
@@ -16,7 +17,8 @@
             "name": "Tissot Seastar 2000",
             "watchtype": 2,
             "price": 957,
-            "customer": 2
+            "customer": 2,
+            "image": "https://cdn.pixabay.com/photo/2014/12/08/14/23/pocket-watch-560937_960_720.jpg"
         }
     },
     {
@@ -26,7 +28,8 @@
             "name": "Casio G-Shock DW6900 Mk2",
             "watchtype": 3,
             "price": 148,
-            "customer": 3
+            "customer": 3,
+            "image": "https://cdn.pixabay.com/photo/2016/06/16/16/44/clock-1461689_960_720.jpg"
         }
     }
 ]
