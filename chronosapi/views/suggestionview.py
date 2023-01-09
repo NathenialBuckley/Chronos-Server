@@ -44,4 +44,4 @@ class SuggestionView(ViewSet):
 class SuggestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Suggestion
-        fields = ('id', 'name', 'watchtype', 'price', 'customerId')
+        fields = ('id', 'name', 'watchtype', 'price', 'customerId', 'image')

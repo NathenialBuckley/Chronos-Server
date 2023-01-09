@@ -20,7 +20,7 @@
         "fields": {
             "password": "pbkdf2_sha256$320000$6caQGznxTT5xOWckvjT6QO$YZTdqhVzw5XIXUcA2TrQsZuC4SJGBeFc2OYOIz6j8Lk=",
             "last_login": null,
-            "username": "meg@ducharme.com",
+            "username": "megducharme",
             "first_name": "Meg",
             "last_name": "Ducharme",
             "email": "meg@ducharme.com",
@@ -35,7 +35,7 @@
         "fields": {
             "password": "pbkdf2_sha256$320000$NKseENHvY06F1AIu2RdtPX$mEuwkQRhvscNYW9ORA68BddrY96oVevnyLz6szhmrO4=",
             "last_login": null,
-            "username": "jenna@solis.com",
+            "username": "jennasolis",
             "first_name": "Jenna",
             "last_name": "Solis",
             "email": "jenna@solis.com",
