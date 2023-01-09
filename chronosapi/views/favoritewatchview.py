@@ -21,11 +21,18 @@ class FavoriteWatchView(ViewSet):
         return Response(seralized.data, status=status.HTTP_200_OK)
 
     def create(self, request):
-        fwatch = FavoriteWatch.objects.get(pk=request.data['watches'])
+        customer = Customer.objects.get(user=request.auth.user)
+        watch = Watch.objects.get(pk=request.data["id"])
+        # fwatch = FavoriteWatch.objects.get(pk=request.data['watches'])
 
         fwatch = FavoriteWatch.objects.create(
-            label=request.data['label'],
+            watch=watch,
+            customer=customer
         )
+
+        # fwatch = FavoriteWatch.objects.create(
+        #     label=request.data['label'],
+        # )
         serializer = FavoriteWatchSeralizer(fwatch)
         return Response(serializer.data)
 

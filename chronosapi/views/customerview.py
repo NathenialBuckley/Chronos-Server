@@ -22,15 +22,15 @@ class CustomerView(ViewSet):
         seralized = CustomerSeralizer(customers, many=True)
         return Response(seralized.data, status=status.HTTP_200_OK)
 
-    def create(self, request):
-        user = User.objects.get(pk=request.data['user'])
-        customer = Customer.objects.get(pk=request.data['customers'])
+    # def create(self, request):
+    #     user = User.objects.get(pk=request.data['user'])
+    #     customer = Customer.objects.get(pk=request.data['customers'])
 
-        customer = Customer.objects.create(
-            label=request.data['label'],
-        )
-        serializer = CustomerSeralizer(customer)
-        return Response(serializer.data)
+    #     customer = Customer.objects.create(
+    #         label=request.data['label'],
+    #     )
+    #     serializer = CustomerSeralizer(customer)
+    #     return Response(serializer.data)
 
     def update(self, request, pk):
         editing_customer = Customer.objects.get(pk=pk)
@@ -54,11 +54,18 @@ class CustomerView(ViewSet):
 
         elif request.method == 'PUT':
             customer = Customer.objects.get(user=request.auth.user)
-            customer.user.username = request.data["username"]
-            customer.user.last_name = request.data["last_name"]
-            customer.user.first_name = request.data["first_name"]
-            customer.user.email = request.data["email"]
+            user = User.objects.get(pk=request.data["user"]["id"])
+            user.username = request.data["username"]
+            user.last_name = request.data["last_name"]
+            user.first_name = request.data["first_name"]
+            user.email = request.data["email"]
+            customer.address = request.data["address"]
+            customer.city = request.data["city"]
+            customer.state = request.data["state"]
+            customer.postalCode = request.data["postalCode"]
+            customer.phone = request.data["phone"]
             customer.save()
+            user.save()
 
             return Response(None, status=status.HTTP_204_NO_CONTENT)
 
