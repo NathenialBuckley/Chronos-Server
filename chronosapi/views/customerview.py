@@ -75,4 +75,4 @@ class CustomerSeralizer(serializers.ModelSerializer):
     class Meta:
         model = Customer
         fields = ('id', 'address', 'city', 'state',
-                  'postalCode', 'phone', 'user')
+                  'postalCode', 'phone', 'user', 'image')

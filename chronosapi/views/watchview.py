@@ -56,7 +56,7 @@ class CustomerSeralizer(serializers.ModelSerializer):
 
     class Meta:
         model = Customer
-        fields = ('id', 'user')
+        fields = ('id', 'user', 'image')
 
 
 class WatchSerializer(serializers.ModelSerializer):
