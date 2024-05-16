@@ -5,4 +5,9 @@
         "--load-plugins=pylint_django",
         "--django-settings-module=chronosserver.settings",
     ],
+    "cSpell.words": [
+        "chronosapi",
+        "Paget",
+        "Talmadge"
+    ],
 }
