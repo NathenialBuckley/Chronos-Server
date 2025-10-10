@@ -15,8 +15,12 @@ def login_user(request):
     Method arguments:
       request -- The full HTTP request object
     '''
-    username = request.data['username']
-    password = request.data['password']
+    # Guard against missing keys to avoid KeyError resulting in 500
+    username = request.data.get('username')
+    password = request.data.get('password')
+
+    if not username or not password:
+        return Response({'valid': False, 'message': 'username and password are required'}, status=400)
 
     # Use the built-in authenticate method to verify
     # authenticate returns the user object or None if no user is found
@@ -24,7 +28,8 @@ def login_user(request):
 
     # If authentication was successful, respond with their token
     if authenticated_user is not None:
-        token = Token.objects.get(user=authenticated_user)
+        # Ensure a token exists for the user (create if missing)
+        token, _ = Token.objects.get_or_create(user=authenticated_user)
         data = {
             'valid': True,
             'token': token.key

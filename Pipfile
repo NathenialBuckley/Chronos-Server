@@ -7,12 +7,11 @@ name = "pypi"
 django = "*"
 autopep8 = "*"
 pylint = "*"
+pylint-django = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
-pylint-django = "*"
 
 [dev-packages]
 pylint = "*"
 
 [requires]
-

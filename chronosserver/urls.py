@@ -10,7 +10,7 @@ from chronosapi.views import WatchTypeView
 from chronosapi.views import WatchView
 from chronosapi.views import SuggestionView
 
-router = routers.DefaultRouter(trailing_slash=False)
+router = routers.DefaultRouter()
 router.register(r'customers', CustomerView, 'customer')
 router.register(r'favoritewatches', FavoriteWatchView, 'favoritewatch')
 router.register(r'reviews', ReviewView, 'review')
@@ -19,8 +19,9 @@ router.register(r'watches', WatchView, 'watch')
 router.register(r'suggestions', SuggestionView, 'suggestion')
 
 urlpatterns = [
-    path('register', register_user),
-    path('login', login_user),
+    # Accept both with and without trailing slash by registering the canonical route with a trailing slash
+    path('register/', register_user),
+    path('login/', login_user),
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
 ]

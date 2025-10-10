@@ -6,6 +6,10 @@
         "--django-settings-module=chronosserver.settings",
     ],
     "cSpell.words": [
-        "chronosserver"
+        "chronosapi",
+        "chronosserver",
+        "favoritewatches",
+        "makemigrations",
+        "watchtypes"
     ],
 }

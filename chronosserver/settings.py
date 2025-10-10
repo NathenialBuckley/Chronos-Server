@@ -27,7 +27,12 @@ SECRET_KEY = 'ypq5uwpg%qjq*nq^%o7xtd4et7g=#2nrbake@u_owep=&k=0!u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+import os
+
+# Allow configuring ALLOWED_HOSTS via environment variable for local/CI use.
+# If ALLOWED_HOSTS is not set, default to common local values.
+_default_allowed = '127.0.0.1,localhost,testserver'
+ALLOWED_HOSTS = [h.strip() for h in os.environ.get('ALLOWED_HOSTS', _default_allowed).split(',') if h.strip()]
 
 
 # Application definition
