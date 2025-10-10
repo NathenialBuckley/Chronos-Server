@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Chronos
 
 Quick start
@@ -51,3 +52,20 @@ Notes
 - `ALLOWED_HOSTS` can be configured via the environment variable `ALLOWED_HOSTS` (comma-separated). Defaults to `127.0.0.1,localhost,testserver`.
 - The `seed` script deletes the database and `chronosapi/migrations` and recreates/apply migrations before loading fixtures.
 - In production, don't use the Django dev server and make sure `DEBUG = False` and `ALLOWED_HOSTS` are set appropriately.
+=======
+Clipped is a modern social media web app for watch enthusiasts. Built for collectors and casual fans alike, it provides a sleek space to share, discover, and discuss watches — blending design simplicity with powerful web technology.
+
+🌟 Overview
+
+Clipped lets users:
+
+Showcase their personal watch collections
+
+Engage with others through likes, comments, and saves
+
+Browse a community feed of shared timepieces
+
+Enjoy a responsive, elegant user interface built with React
+
+🧰 Tech Stack Category - Technologies Frontend - React, Tailwind CSS, React Router Backend - Django REST Framework Database - SQLite / PostgreSQL Utilities - Axios, Django CORS Headers, REST API Integration Version Control - Git & GitHub
+>>>>>>> 74bca01d0986c8e6531ea3ac3a7b1ce07d9c0554
