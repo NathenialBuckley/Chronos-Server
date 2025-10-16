@@ -10,6 +10,11 @@ pylint = "*"
 pylint-django = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
+psycopg2-binary = "*"
+dj-database-url = "*"
+whitenoise = "*"
+python-dotenv = "*"
+gunicorn = "*"
 
 [dev-packages]
 pylint = "*"
