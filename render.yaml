@@ -1,0 +1,30 @@
+services:
+  # Django Web Service
+  - type: web
+    name: chronos-server
+    runtime: python
+    plan: free
+    branch: main
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn chronosserver.wsgi:application --config gunicorn_config.py"
+    envVars:
+      - key: DJANGO_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: DEBUG
+        value: False
+      - key: WEB_CONCURRENCY
+        value: 4
+
+  # PostgreSQL Database
+  - type: pserv
+    name: chronos-db
+    runtime: postgresql
+    plan: free
+    ipAllowList: []
+    databases:
+      - name: chronos_production
+        user: chronos_user

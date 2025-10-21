@@ -11,8 +11,5 @@ dj-database-url>=2.1.0  # Database URL parsing
 # Static files serving
 whitenoise>=6.6.0  # Static file serving
 
-# Environment variables
-python-dotenv>=1.0.0  # .env file support
-
 # WSGI server
 gunicorn>=21.2.0  # Production WSGI server
