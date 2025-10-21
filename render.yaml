@@ -19,12 +19,9 @@ services:
       - key: WEB_CONCURRENCY
         value: 4
 
+databases:
   # PostgreSQL Database
-  - type: pserv
-    name: chronos-db
-    runtime: postgresql
+  - name: chronos-db
     plan: free
-    ipAllowList: []
-    databases:
-      - name: chronos_production
-        user: chronos_user
+    databaseName: chronos_production
+    user: chronos_user
